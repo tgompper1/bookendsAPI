@@ -1,17 +1,16 @@
 using BookEndsAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Configuration.AddEnvironmentVariables(); // Load from environment variables
-
-var connectionString = builder.Configuration["MY_CONNECTION_STRING"]; // Read environment variable
-
-Console.WriteLine($"Loaded connection string: {connectionString}");
+Env.Load();
+string connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
 // Add Database Context
 builder.Services.AddDbContext<AppDBContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(connectionString));
+
 
 // Add Controllers
 builder.Services.AddControllers();
