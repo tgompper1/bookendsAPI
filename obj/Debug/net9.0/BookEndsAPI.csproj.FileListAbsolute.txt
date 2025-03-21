@@ -161,3 +161,4 @@ C:\Users\tgomp\OneDrive\Desktop\bookEnds\BookEndsAPI\obj\Debug\net9.0\refint\Boo
 C:\Users\tgomp\OneDrive\Desktop\bookEnds\BookEndsAPI\obj\Debug\net9.0\BookEndsAPI.pdb
 C:\Users\tgomp\OneDrive\Desktop\bookEnds\BookEndsAPI\obj\Debug\net9.0\BookEndsAPI.genruntimeconfig.cache
 C:\Users\tgomp\OneDrive\Desktop\bookEnds\BookEndsAPI\obj\Debug\net9.0\ref\BookEndsAPI.dll
+C:\Users\tgomp\OneDrive\Desktop\bookEnds\BookEndsAPI\obj\Debug\net9.0\BookEndsAPI.sourcelink.json

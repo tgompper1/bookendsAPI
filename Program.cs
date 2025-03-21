@@ -3,6 +3,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration.AddEnvironmentVariables(); // Load from environment variables
+
+var connectionString = builder.Configuration["MY_CONNECTION_STRING"]; // Read environment variable
+
+Console.WriteLine($"Loaded connection string: {connectionString}");
+
 // Add Database Context
 builder.Services.AddDbContext<AppDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
